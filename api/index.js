@@ -4,15 +4,13 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 mongoose
-  .connect(
-    process.env.MONGO
-  )
+  .connect(process.env.MONGO)
   .then(() => {
     console.log("MongoDB is Connected");
   })
   .catch((err) => {
     conosle.log(err);
-  })
+  });
 
 const app = express();
 
